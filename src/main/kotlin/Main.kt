@@ -7,5 +7,7 @@ fun main() {
    val service = WallService()
     service.add(fp)
     service.update(fp)
+    service.add(Post(ownerId = 5))
+    println(fp)
 
 }

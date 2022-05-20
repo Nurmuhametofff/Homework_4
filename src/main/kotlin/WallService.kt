@@ -10,11 +10,13 @@ class WallService {
         posts += newPost
         return posts.last()
     }
+
+
     fun update(post: Post): Boolean {
-        for (posters in posts){
+        for ((index, posters) in posts.withIndex()){
             if (posters.id == post.id){
-                val index = posts.indexOf(posters)
-                posts[index] = post.copy(id = post.id, date = post.date)
+                val newPost = post.copy(ownerId = posters.ownerId, date = posters.date)
+                posts += newPost
                 return true
             }
         }
