@@ -13,6 +13,9 @@ data class Post(
     val reposts: RepostsClass = RepostsClass(),
     val views: ViewsClass = ViewsClass(),
     val postType: String = "",
+    val postSource: PostSourceClass? = null,
+    val geo: GeoClass? = null,
+    val copyHistory: Array<RepostsClass>? = null,
     val signerId: Int = 1,
     val canPin: Boolean = true,
     val canDelete: Boolean = true,
@@ -21,5 +24,6 @@ data class Post(
     val marketAsAds: Boolean = true,
     val isFavorite: Boolean = true,
     val donut: DonutClass = DonutClass(),
-    val postPonedID: Int = 1
+    val postPonedID: Int = 1,
+    val attachments:Array<Attachment> = emptyArray()
 )
