@@ -10,6 +10,10 @@ fun main() {
     service.add(fp)
     service.update(fp)
     service.add(Post(ownerId = 5))
+    service.add(Post(ownerId = 6))
+    service.add(Post(ownerId = 7))
+    service.add(Post(ownerId = 8))
     println(fp)
-
+    val com = Comment()
+    service.createComment(10, com)
 }
